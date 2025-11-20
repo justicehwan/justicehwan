@@ -2,7 +2,7 @@
   <img src="./header.svg" width="100%" alt="Minecraft Header">
 </div>
 
-## 안녕하세요 👋
+## 
 
 <div align="center">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="40" alt="python logo"  />
