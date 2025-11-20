@@ -1,105 +1,63 @@
-<svg fill="none" viewBox="0 0 800 300" width="800" height="300" xmlns="http://www.w3.org/2000/svg">
-  <foreignObject width="100%" height="100%">
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <style>
-        /* 3D 애니메이션 정의 */
-        @keyframes gridMove {
-          0% { transform: perspective(300px) rotateX(60deg) translateY(0) translateZ(-100px); }
-          100% { transform: perspective(300px) rotateX(60deg) translateY(40px) translateZ(-100px); }
-        }
-        @keyframes glow {
-          0%, 100% { opacity: 0.4; box-shadow: 0 0 30px rgba(56, 189, 248, 0.2); }
-          50% { opacity: 0.8; box-shadow: 0 0 60px rgba(56, 189, 248, 0.6); }
-        }
-        @keyframes float {
-          0% { transform: translateY(0px); }
-          50% { transform: translateY(-10px); }
-          100% { transform: translateY(0px); }
-        }
+<svg fill="none" viewBox="0 0 800 200" width="800" height="200" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    /* 구름 움직임 애니메이션 */
+    @keyframes cloudMove {
+      0% { transform: translateX(800px); }
+      100% { transform: translateX(-200px); }
+    }
+    /* 텍스트 둥둥 뜨는 애니메이션 */
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+    
+    .title-text {
+      font-family: Arial, sans-serif;
+      font-weight: 900;
+      font-size: 60px;
+      fill: #D7D7D7; /* 윗면 색상 */
+      stroke: #000;
+      stroke-width: 2px;
+      animation: float 3s ease-in-out infinite;
+    }
+    
+    /* 3D 입체 그림자 효과 (레이어 쌓기) */
+    .shadow-1 { fill: #3F3F3F; transform: translate(4px, 4px); }
+    .shadow-2 { fill: #2A2A2A; transform: translate(8px, 8px); }
 
-        /* 컨테이너 설정 */
-        .container {
-          width: 100%;
-          height: 300px;
-          background-color: #0d1117; /* 깃허브 다크모드 배경색 */
-          overflow: hidden;
-          position: relative;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-        }
+    .subtitle {
+      font-family: Courier New, monospace;
+      font-weight: bold;
+      font-size: 20px;
+      fill: #FFFF55; /* 마인크래프트 노란색 텍스트 */
+      text-shadow: 2px 2px #3F3F3F;
+      animation: float 3s ease-in-out infinite;
+      animation-delay: 0.5s;
+    }
 
-        /* 3D 그리드 바닥 */
-        .grid {
-          position: absolute;
-          width: 200%;
-          height: 200%;
-          bottom: -50%;
-          background-image: 
-            linear-gradient(rgba(56, 189, 248, 0.3) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(56, 189, 248, 0.3) 1px, transparent 1px);
-          background-size: 40px 40px;
-          transform-origin: 50% 0%;
-          animation: gridMove 1.5s linear infinite;
-          mask-image: linear-gradient(to bottom, transparent 5%, black 40%);
-          -webkit-mask-image: linear-gradient(to bottom, transparent 5%, black 40%);
-        }
+    .cloud {
+      fill: rgba(255, 255, 255, 0.8);
+      animation: cloudMove 20s linear infinite;
+    }
+  </style>
 
-        /* 중앙 플로팅 텍스트 박스 */
-        .content {
-          position: relative;
-          z-index: 10;
-          text-align: center;
-          animation: float 4s ease-in-out infinite;
-        }
+  <rect width="100%" height="100%" fill="#76B6FF"/>
 
-        .title {
-          font-size: 50px;
-          font-weight: 900;
-          color: white;
-          letter-spacing: 4px;
-          text-shadow: 0 0 20px rgba(56, 189, 248, 0.8);
-          margin: 0;
-        }
+  <g class="cloud" style="animation-duration: 25s;">
+    <rect x="50" y="30" width="100" height="30" />
+    <rect x="80" y="20" width="60" height="40" />
+  </g>
+  <g class="cloud" style="animation-duration: 18s; animation-delay: -10s; opacity: 0.6;">
+    <rect x="400" y="60" width="120" height="25" />
+    <rect x="430" y="50" width="50" height="35" />
+  </g>
 
-        .subtitle {
-          font-size: 14px;
-          color: #38bdf8;
-          margin-top: 10px;
-          letter-spacing: 6px;
-          text-transform: uppercase;
-          font-weight: bold;
-          background: rgba(13, 17, 23, 0.8);
-          padding: 5px 15px;
-          border: 1px solid rgba(56, 189, 248, 0.3);
-          border-radius: 20px;
-          display: inline-block;
-        }
-
-        /* 배경 빛 효과 */
-        .sun {
-          position: absolute;
-          width: 300px;
-          height: 150px;
-          background: radial-gradient(circle, rgba(56, 189, 248, 0.2) 0%, transparent 70%);
-          top: 0;
-          left: 50%;
-          transform: translateX(-50%);
-          animation: glow 4s infinite;
-        }
-      </style>
-
-      <div class="container">
-        <div class="sun"></div>
-        
-        <div class="grid"></div>
-
-        <div class="content">
-          <h1 class="title">DESIGN &lt;/&gt; CODE</h1>
-          <div class="subtitle">Frontend Developer</div>
-        </div>
-      </div>
-    </div>
-  </foreignObject>
+  <rect y="160" width="100%" height="40" fill="#588824"/> <rect y="160" width="100%" height="10" fill="#74B635"/> <g text-anchor="middle" transform="translate(400, 100)">
+    <text x="8" y="8" class="title-text" fill="#333">MINECRAFT</text> 
+    <text x="4" y="4" class="title-text" fill="#666">MINECRAFT</text>
+    
+    <text x="0" y="0" class="title-text">MINECRAFT</text>
+    
+    <text x="0" y="50" class="subtitle">FRONTEND EDITION</text>
+  </g>
 </svg>
