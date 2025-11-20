@@ -7,9 +7,9 @@
   <img src="https://readme-typing-svg.herokuapp.com?font=Rubik+Glitch&weight=400&size=80&duration=2000&pause=1000&color=FF0055&center=true&vCenter=true&width=800&height=200&lines=HELLO+WORLD;CREATIVE+DEV" alt="Glitch Header" />
 </div>
 
+<img src="./pixel_terrain_header.svg" width="100%">
 
-
-
+<img src="./pixel_planet_header.svg" width="100%">
 
 ## Hi there 👋
 
