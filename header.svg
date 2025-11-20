@@ -68,6 +68,26 @@
 
   <rect y="165" width="100%" height="35" fill="#6aa84f"/>
   <rect y="165" width="100%" height="8" fill="#93c47d"/>
+  <rect x="5%" y="178" width="8" height="8" fill="#7f7f7f"/>
+  <rect x="10%" y="175" width="6" height="6" fill="#5c5c5c"/>
+  <rect x="25%" y="172" width="10" height="10" fill="#a0a0a0"/>
+  <rect x="32%" y="180" width="7" height="7" fill="#6f6f6f"/>
+  <rect x="40%" y="178" width="5" height="5" fill="#8b8b8b"/>
+  <rect x="48%" y="180" width="9" height="9" fill="#727272"/>
+  <rect x="55%" y="176" width="6" height="6" fill="#919191"/>
+  <rect x="65%" y="178" width="12" height="12" fill="#505050"/>
+  <rect x="75%" y="182" width="8" height="8" fill="#808080"/>
+  <rect x="90%" y="173" width="7" height="7" fill="#6a6a6a"/>
+  <rect x="97%" y="179" width="10" height="10" fill="#959595"/>
+  <rect x="5%" y="177" width="12" height="12" fill="#7f7f7f"/>
+  <rect x="17.5%" y="175" width="12" height="12" fill="#5c5c5c"/>
+  <rect x="30%" y="170" width="12" height="12" fill="#a0a0a0"/>
+  <rect x="42.5%" y="175" width="12" height="12" fill="#6f6f6f"/>
+  <rect x="55%" y="180" width="12" height="12" fill="#8b8b8b"/>
+  <rect x="67.5%" y="175" width="12" height="12" fill="#727272"/>
+  <rect x="80%" y="190" width="12" height="12" fill="#919191"/>
+  <rect x="92.5%" y="175" width="12" height="12" fill="#505050"/>
+  
 
   <g class="anim-float">
     <text x="50%" y="55%" class="mine-text text-3d-1">Justicehwan 's GitHub</text>
@@ -77,3 +97,4 @@
     <text x="50%" y="75%" class="sub-text">FRONTEND DEVELOPER</text>
   </g>
 </svg>
+
